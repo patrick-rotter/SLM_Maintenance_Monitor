@@ -14,6 +14,6 @@ public class MaintenanceMonitorController {
 
     @GetMapping("/get")
     public String getMessage() {
-        return service.getMessageWithTimestamp();
+        return service.getMessage();
     }
 }

@@ -11,7 +11,8 @@ public class MaintenanceMonitorService {
     public String getMessage() {
         return status.getStatusMessage();
     }
-    public String getMessageWithTimestamp() {
-        return status.toString();
+
+    public void setMessage(String msg) {
+        status.setStatusMessage(msg);
     }
 }
