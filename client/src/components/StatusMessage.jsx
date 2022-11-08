@@ -15,14 +15,17 @@ export const StatusMessage = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(getMessage, 1000);
+    const interval = setInterval(getMessage, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div style={{ backgroundColor: message ? "red" : "green" }}>
+    <div
+      className="container"
+      style={{ backgroundColor: message ? "#ff6666" : "#b3ff99" }}
+    >
       <h1>Maintenance Monitor</h1>
-      <div>{message}</div>
+      <div className="message">{message}</div>
       <div>last update: {date.toLocaleTimeString("fr-FR")}</div>
     </div>
   );
