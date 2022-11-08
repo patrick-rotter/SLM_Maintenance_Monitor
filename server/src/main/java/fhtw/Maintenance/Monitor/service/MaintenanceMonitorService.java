@@ -7,4 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MaintenanceMonitorService {
     private final Status status = new Status();
+
+    public String getMessage() {
+        return status.getStatusMessage();
+    }
+    public String getMessageWithTimestamp() {
+        return status.toString();
+    }
 }
