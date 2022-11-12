@@ -15,7 +15,6 @@ public class Status {
     public void setStatusMessage(String statusMessage) {
         if(statusMessage != null){
             this.statusMessage = statusMessage;
-            System.out.println(this.statusMessage);
         }
     }
 }
