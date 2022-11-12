@@ -14,6 +14,9 @@ class MaintenanceMonitorServiceTest {
         assertEquals("", status.getStatusMessage());
         service.postMessage("test");
         assertEquals("test", status.getStatusMessage());
+        service.postMessage("Hello world");
+        assertEquals("Hello world", status.getStatusMessage());
         service.postMessage("");
+        assertEquals("", status.getStatusMessage());
     }
 }
