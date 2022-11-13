@@ -5,7 +5,7 @@ export const StatusMessage = () => {
   const [date, setDate] = useState(new Date());
 
   const getMessage = () => {
-    fetch("http://localhost:80/message")
+    fetch("http://localhost:8080/message")
       .then((res) => res.json())
       .then((data) => setMessage(data));
 
