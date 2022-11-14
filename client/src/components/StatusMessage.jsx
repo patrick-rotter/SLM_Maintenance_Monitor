@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 
 export const StatusMessage = () => {
-  const [message, setMessage] = useState("test");
+  const [message, setMessage] = useState();
   const [date, setDate] = useState(new Date());
 
-  const getMessage = () => {
+  const getMessage = async () => {
     fetch("http://localhost:8080/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data));
+      .then((res) => res.text())
+      .then((res) => setMessage(res))
+      .catch((err) => console.log(err));
 
-    if (data !== message) {
-      setDate(new Date());
-    }
+    setDate(new Date());
   };
 
   useEffect(() => {
@@ -19,10 +18,13 @@ export const StatusMessage = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const red = "#ff6666";
+  const green = "#b3ff99";
+
   return (
     <div
       className="container"
-      style={{ backgroundColor: message ? "#ff6666" : "#b3ff99" }}
+      style={{ backgroundColor: message ? red : green }}
     >
       <h1>Maintenance Monitor</h1>
       <div className="message">{message}</div>

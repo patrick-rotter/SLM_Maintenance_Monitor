@@ -23,10 +23,10 @@ class MaintenanceMonitorApplicationTests {
 
 	@Test
 	public void greetingShouldReturnDefaultMessage() throws Exception {
-		assertEquals("test", this.restTemplate.getForObject("http://localhost:" + port + "/get",
+		assertEquals("test", this.restTemplate.getForObject("http://localhost:" + port + "/message",
 				String.class));
 		this.restTemplate.postForLocation("http://localhost:" + port + "/reset", null);
-		assertNull(this.restTemplate.getForObject("http://localhost:" + port + "/get",
+		assertNull(this.restTemplate.getForObject("http://localhost:" + port + "/message",
 				String.class));
 	}
 

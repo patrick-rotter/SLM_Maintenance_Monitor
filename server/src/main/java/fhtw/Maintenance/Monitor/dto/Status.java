@@ -4,7 +4,7 @@ public class Status {
     private String statusMessage;
 
     public Status() {
-        setStatusMessage("test");
+        setStatusMessage("");
     }
 
     public String getStatusMessage() {
