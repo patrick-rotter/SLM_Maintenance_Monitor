@@ -15,4 +15,8 @@ public class MaintenanceMonitorService {
     public void setMessage(String msg) {
         status.setStatusMessage(msg);
     }
+
+    public void postMessage(String message){
+        status.setStatusMessage(message);
+    }
 }
