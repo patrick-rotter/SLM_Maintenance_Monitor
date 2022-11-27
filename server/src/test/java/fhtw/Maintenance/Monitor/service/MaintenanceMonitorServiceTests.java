@@ -9,7 +9,7 @@ public class MaintenanceMonitorServiceTests {
 
     @Test
     void testDefaultState() {
-        assertEquals("test", service.getMessage());
+        assertEquals("", service.getMessage());
     }
 
     @Test
