@@ -9,7 +9,7 @@ public class MaintenanceMonitorServiceTests {
 
     @Test
     void testDefaultState() {
-        assertEquals("test", service.getMessage());
+        assertEquals("", service.getMessage());
     }
 
     @Test
@@ -18,4 +18,15 @@ public class MaintenanceMonitorServiceTests {
         assertEquals("hallo", service.getMessage());
     }
 
+    @Test
+    void postMessage() {
+        service.setMessage("");
+        assertEquals("", service.getMessage());
+        service.setMessage("test");
+        assertEquals("test", service.getMessage());
+        service.setMessage("Hello world");
+        assertEquals("Hello world", service.getMessage());
+        service.setMessage("");
+        assertEquals("", service.getMessage());
+    }
 }

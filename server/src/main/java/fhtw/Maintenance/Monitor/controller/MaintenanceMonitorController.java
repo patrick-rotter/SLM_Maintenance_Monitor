@@ -12,7 +12,8 @@ public class MaintenanceMonitorController {
         this.service = service;
     }
 
-    @GetMapping("/get")
+
+    @GetMapping("/message")
     public String getMessage() {
         return service.getMessage();
     }
@@ -23,6 +24,6 @@ public class MaintenanceMonitorController {
     }
     @PostMapping("/post/{message}")
     void setMessage(@PathVariable String message){
-        service.postMessage(message);
+        service.setMessage(message);
     }
 }

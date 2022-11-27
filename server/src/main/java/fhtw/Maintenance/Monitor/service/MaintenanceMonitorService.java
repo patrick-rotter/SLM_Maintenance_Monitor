@@ -6,15 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MaintenanceMonitorService {
-    private final Status status;
-
-    public MaintenanceMonitorService(Status status) {
-        this.status = status;
-    }
-
-    public MaintenanceMonitorService() {
-        this.status = new Status();
-    }
+    private final Status status = new Status();
 
     public String getMessage() {
         return status.getStatusMessage();
@@ -22,9 +14,5 @@ public class MaintenanceMonitorService {
 
     public void setMessage(String msg) {
         status.setStatusMessage(msg);
-    }
-
-    public void postMessage(String message){
-        status.setStatusMessage(message);
     }
 }
