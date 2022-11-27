@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 class MaintenanceMonitorApplicationTests {
 
 	@LocalServerPort
-	private int port;
+	private int port = 8080;
 	@Autowired
 	private TestRestTemplate restTemplate;
 
@@ -23,7 +23,7 @@ class MaintenanceMonitorApplicationTests {
 
 	@Test
 	public void greetingShouldReturnDefaultMessage() throws Exception {
-		assertEquals("test", this.restTemplate.getForObject("http://localhost:" + port + "/message",
+		assertEquals(null, this.restTemplate.getForObject("http://localhost:" + port + "/message",
 				String.class));
 		this.restTemplate.postForLocation("http://localhost:" + port + "/reset", null);
 		assertNull(this.restTemplate.getForObject("http://localhost:" + port + "/message",
