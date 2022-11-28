@@ -1,8 +1,8 @@
 #### 1. Used tech stack
 
 ###### 1.1 Backend
-- Java
-- Spring Boot
+- Java 17
+- Spring Boot 2.7.5
 ###### 1.2 Frontend
 - ES6
 - React 18.2
@@ -13,6 +13,7 @@
 #### 2. Running the application
 
 ###### 2.1 Backend
+<br>Open the java project that is located in the directory /server. After maven downloads the necessary dependencies the maven SLM-options are available and can be used. To run the server execute the maven option "install" and then run the application.
 <br>Default port: 8080
 
 ###### 2.2 Frontend
