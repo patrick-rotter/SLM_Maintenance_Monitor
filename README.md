@@ -1,7 +1,9 @@
-#### 1. Tech-Stack
+#### 1. Used tech stack
 
-###### Backend
-###### Frontend
+###### 1.1 Backend
+- Java
+- Spring Boot
+###### 1.2 Frontend
 - ES6
 - React 18.2
 - npm 8.5.5
@@ -10,20 +12,26 @@
 
 #### 2. Running the application
 
-Navigate into /client and run `npm install` to install dependencies.<br> To run the client, execute `npm start` in /client.
+###### 2.1 Backend
+<br>Default port: 8080
+
+###### 2.2 Frontend
+Navigate into /client and run `npm install` to install dependencies. To run the client, run `npm run dev`.
+<br>Default port: 5173
 
 #### 3. Using the application
 
 When no message is set, the monitor's background will indicate an ok-status with a green background.
-![statusok](https://i.imgur.com/SrFZtuj.png)
+<img src="https://i.imgur.com/SrFZtuj.png" alt="statusok" width="600"/>
 
-To set a message, an admin can make post request to /post/<message> with the current status message. Client-side this is also indicated with a red background.
+To set a message, an admin can make a post request to /post/<message> with the current status message. Client-side this is indicated with a red background.
 http://localhost:8080/post/<message>
-![statusnotok](https://i.imgur.com/CKWFpBu.png)
+  
+<img src="https://i.imgur.com/CKWFpBu.png" alt="statusnotok" width="600"/>
 
 To reset the status message, an admin can make a post request to /reset
 http://localhost:8080/reset
 
-![statusok](https://i.imgur.com/stCAgAD.png)
+<img src="https://i.imgur.com/stCAgAD.png" alt="statusok" width="600"/>
 
 
