@@ -29,5 +29,4 @@ public class MaintenanceMonitorServiceTests {
         service.setMessage("");
         assertEquals("", service.getMessage());
     }
-
 }

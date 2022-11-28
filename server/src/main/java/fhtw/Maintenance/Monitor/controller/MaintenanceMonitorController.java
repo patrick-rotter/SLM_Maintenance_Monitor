@@ -22,7 +22,6 @@ public class MaintenanceMonitorController {
     public void resetMsg() {
         service.setMessage("");
     }
-
     @PostMapping("/post/{message}")
     void setMessage(@PathVariable String message){
         service.setMessage(message);
