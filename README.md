@@ -22,7 +22,7 @@ Navigate into /client and run `npm install` to install dependencies. To run the 
 #### 3. Using the application
 
 When no message is set, the monitor's background will indicate an ok-status with a green background.
-<img src="https://i.imgur.com/SrFZtuj.png" alt="statusok" width="600"/>
+<img src="https://i.imgur.com/nu1MesM.png" alt="statusok" width="600"/>
 
 To set a message, an admin can make a post request to /post/<message> with the current status message. Client-side this is indicated with a red background.
 http://localhost:8080/post/<message>
