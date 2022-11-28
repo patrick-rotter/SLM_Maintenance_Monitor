@@ -13,7 +13,7 @@
 #### 2. Running the application
 
 ###### 2.1 Backend
-<br>Open the java project that is located in the directory /server. After maven downloads the necessary dependencies the maven SLM-options are available and can be used. To run the server execute the maven option "install" and then run the application.
+Open the java project that is located in the directory /server. After maven downloads the necessary dependencies the maven SLM-options are available and can be used. To run the server execute the maven option "install" and then run the application.
 <br>Default port: 8080
 
 ###### 2.2 Frontend
@@ -26,12 +26,12 @@ When no message is set, the monitor's background will indicate an ok-status with
 <img src="https://i.imgur.com/nu1MesM.png" alt="statusok" width="600"/>
 
 To set a message, an admin can make a post request to /post/<message> with the current status message. Client-side this is indicated with a red background.
-http://localhost:8080/post/<message>
+<br>http://localhost:8080/post/<message>
   
 <img src="https://i.imgur.com/CKWFpBu.png" alt="statusnotok" width="600"/>
 
-To reset the status message, an admin can make a post request to /reset
-http://localhost:8080/reset
+To reset the status message, an admin can make a post request to /reset.
+<br>http://localhost:8080/reset
 
 <img src="https://i.imgur.com/stCAgAD.png" alt="statusok" width="600"/>
 
